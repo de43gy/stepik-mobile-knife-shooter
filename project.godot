@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="Stepik-Mobile-KnifeShooter"
+config/tags=PackedStringArray("course", "in_development")
+run/main_scene="res://scenes/game/game.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://assets/target5.png"
-config/tags=PackedStringArray("course", "in_development")
 
 [display]
 
@@ -26,6 +27,12 @@ window/handheld/orientation=1
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
+
+[layer_names]
+
+2d_physics/layer_2="knife"
+2d_physics/layer_3="target"
+2d_physics/layer_4="apple"
 
 [rendering]
 
