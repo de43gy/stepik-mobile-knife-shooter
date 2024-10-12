@@ -10,9 +10,11 @@ func create_new_knife():
 	add_child(knife)
 
 func _input(event: InputEvent):
-	if event is InputEventScreenTouch and event.is_pressed() and timer.time_left <= 0:
-		knife.throw()
-		timer.start()
+	if event is InputEventScreenTouch\
+		and event.is_pressed()\
+		and timer.time_left <= 0:
+			knife.throw()
+			timer.start()
 
 
 func _on_timer_timeout():
