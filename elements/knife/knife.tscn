@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://umoekjetu1cl"]
+
+[ext_resource type="Texture2D" uid="uid://cso6wdxm7tlg8" path="res://assets/knife1.png" id="1_4ybaf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onveg"]
+size = Vector2(26, 130)
+
+[node name="Knife" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4ybaf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_onveg")
