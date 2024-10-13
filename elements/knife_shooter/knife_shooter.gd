@@ -2,8 +2,8 @@ extends Node2D
 
 var knife_scene := preload("res://elements/knife/knife.tscn")
 
-@onready var knife := $Knife
-@onready var timer := $Timer
+@onready var knife = $Knife
+@onready var timer = $Timer
 
 func create_new_knife():
 	knife = knife_scene.instantiate()
@@ -12,7 +12,7 @@ func create_new_knife():
 func _input(event: InputEvent):
 	if event is InputEventScreenTouch\
 		and event.is_pressed()\
-		and timer.time_left <= 0:
+		and timer.is_stopped():
 			knife.throw()
 			timer.start()
 
