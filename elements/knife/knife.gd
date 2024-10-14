@@ -27,3 +27,4 @@ func attach_knife_to_target(target: Target, collision_position: Vector2, collisi
 	global_position = collision_position + collision_normal * (20 + randi_range(1, 30))
 	rotation = -target.rotation
 	set_physics_process(false)
+	

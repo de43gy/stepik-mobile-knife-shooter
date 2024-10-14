@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dr4buu6nfowdn"]
+
+[ext_resource type="Script" path="res://elements/apple/apple.gd" id="1_hnubv"]
+[ext_resource type="Texture2D" uid="uid://yr3d2gdfsoy4" path="res://assets/apple1.png" id="1_hri3n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5jtuq"]
+radius = 36.0
+
+[node name="Apple" type="Node2D"]
+position = Vector2(0, 13)
+rotation = 3.14159
+script = ExtResource("1_hnubv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_hri3n")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_5jtuq")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
