@@ -16,6 +16,5 @@ func _input(event: InputEvent):
 			knife.throw()
 			timer.start()
 
-
 func _on_timer_timeout():
 	create_new_knife()
