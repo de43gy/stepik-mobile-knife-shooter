@@ -16,6 +16,10 @@ run/main_scene="res://scenes/game/game.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://assets/target5.png"
 
+[autoload]
+
+Globals="*res://core/globals.gd"
+
 [display]
 
 window/size/viewport_width=720
